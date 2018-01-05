@@ -1,10 +1,10 @@
-# swoole-chat
+# swoole-proxy
 
-* 小试牛刀，swoole实现简单聊天室功能
+* swoole实现前端代理服务器(websocket), 后端服务器是c，c++
 
 ## 一，概述
 
-* 用swoole简单开发聊天服务器逻辑，兼容低端浏览器不支持websock服务器，客户端采用flash_websocket来兼容。
+* 用swoole实现一个websocket代理服务器，代理到后端c++的tcp服务器上， 方便h5游戏开发，主要实现转换协议， 把后端c++的tcp协议转换成swoole的websocket协议。
  
 ## 二，示例图
 
@@ -13,22 +13,29 @@
  
 ## 三，使用
 
-* 配置服务器redis连接，消息存redis里
-
-服务器启动：
+* 1，目录说明：
 
 ```
-php Chat.php                启动聊天服务
-php FlashPolicy.php         启动flash客户端安全策略服务器
+./c++server c++服务器目录，可跑起来
+./client 客户端交互测试工具
+./ProxyServer.php  代理服务器代码
+
+``` 
+
+* 2，启动服务器 ：
+
+先进c++server目录， 点击可执行文件运行c++服务器， c++服务器（windows版）是一个简单echo服务器， 你发送什么样的数据会原样返回，跑起来后会到c++服务器端口：6080
+
+代理服务器启动：配置代理服务器要代理的后端c++服务器的ip和端口
+
+```
+gameproxy.sh start         启动代理服务器
+gameproxy.sh stop          停止代理服务器
 
 ```
 
-备注：FlashPolicy.php服务器提供flash_websocket安全策略使用， 只有不支持websocket浏览器会用到
-
-客户端：
-
-浏览器牌chat.html文件, 记住后面带上参数name=xxx,随便填写，例如：http://192.168.7.196/myswoole/chat/chat.html?name=bbb
-        
+客户端：进入client目录，浏览器运行index.html文件，
+       
 
 ## 四，联系方式
 
