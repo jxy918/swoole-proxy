@@ -19,6 +19,7 @@
 ./c++server c++服务器目录，可跑起来
 ./client 客户端交互测试工具
 ./ProxyServer.php  代理服务器代码
+./ProxyServerByCo.php  协成客户端版，代理服务器代码
 
 ``` 
 
@@ -26,7 +27,7 @@
 
 先进c++server目录， 点击可执行文件运行c++服务器， c++服务器（windows版）是一个简单echo服务器， 你发送什么样的数据会原样返回，跑起来后会到c++服务器端口：6080
 
-代理服务器启动：配置代理服务器要代理的后端c++服务器的ip和端口
+代理服务器启动：配置代理服务器要代理的后端c++服务器的ip和端口, 如果是想跑协程版， 请自行修改一下gameproxy.sh里的代码，把ProxyServer.php替换成ProxyServerByCo
 
 ```
 gameproxy.sh start         启动代理服务器

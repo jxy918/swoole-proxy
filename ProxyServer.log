@@ -1,0 +1,60 @@
+[2018-05-30 00:53:23 *89.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:23 $87.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:25 *90.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:25 $87.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:29 *92.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:29 $87.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:30 *93.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:30 $87.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:39 *91.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:39 $87.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:49 *95.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:49 $87.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:51 *96.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:51 $87.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:56 *94.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:56 $87.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-30 01:00:37 *113.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function close() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 01:00:37 $111.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 01:00:44 *114.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function close() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 01:00:44 $111.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-30 01:00:52 *115.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function close() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 01:00:52 $111.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 01:00:59 *116.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function close() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 01:00:59 $111.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0

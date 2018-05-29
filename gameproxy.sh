@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ $1 == "start" ]
 then   
     echo "do start...\n"
-    /usr/bin/php ProxyServer.php &
+    php ProxyServer.php &
 elif [ $1 == "stop" ] 
 then
     echo "do stop...\n"
