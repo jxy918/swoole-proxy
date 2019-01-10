@@ -1,6 +1,6 @@
 <?php
 /**
- * 代理服务器，php版本，游戏服务器，用来代理c++的tcp服务器,客户端连接采用异步方式
+ * 代理服务器，php版本，游戏服务器，用来代理c++的tcp服务器,客户端连接采用同步写成的方式， 注意此方式， 要求服务器必须有返回，要不然会超时
  */ 
 class ProxyServerByCo {
     /**
@@ -36,13 +36,13 @@ class ProxyServerByCo {
     /**
      * 后端服务器配置
      */         
-    protected $back_serv = array('ip'=>'192.168.7.66', 'port'=>6080, 'timeout'=>0.5);
+    protected $back_serv = array('ip'=>'192.168.1.34', 'port'=>9089, 'timeout'=>5);
     
     /**
      * 服务器配置,这里设置很关键， 要了解c++服务器的包头+包体
      */         
     protected $serv_conf = array(
-		'dispatch_mode' => 2,
+		'dispatch_mode' => 3,
 		'open_length_check'     => true,
 		'package_length_type'   => 'N',
 		'package_length_offset' => 0,          		
@@ -78,6 +78,7 @@ class ProxyServerByCo {
 		$this->log("MasterPid={$serv->master_pid}");
         $this->log("ManagerPid={$serv->manager_pid}");
         $this->log("Server: start.Swoole version is [" . SWOOLE_VERSION . "]");
+        $this->log("IP: \e[0;32m{$this->serv_ip}\e[0m, PORT:\e[0;32m{$this->serv_port}\e[0m PROXY_IP:\e[0;32m{$this->back_serv['ip']}\e[0m, PROXY_PORT:\e[0;32m{$this->back_serv['port']}\e[0m, PROXY_TIMEOUT:\e[0;32m{$this->back_serv['timeout']}\e[0m");
     }
 
 	public function onManagerStart($serv) {
@@ -111,21 +112,24 @@ class ProxyServerByCo {
      * 处理websocket连接成功后回调
      */         
     public function onOpen($server, $frame) {
-        //启动异步客户端		
+        //启用协程客户端
         $client = new Swoole\Coroutine\Client(SWOOLE_SOCK_TCP | SWOOLE_KEEP);
-		if (!$client->connect($this->back_serv['ip'], $this->back_serv['port'], $this->back_serv['timeout'])) {
-			$this->log("connect failed. Error: {$client->errCode}\n");
-		}
-		//初始化变量
-		$this->backends[$client->sock] = array(
-			'client_fd' => $frame->fd,
-			//'socket' => $socket,
-		);
-		$this->clients[$frame->fd] = array(
-			'socket' => $client,
-		);
-		$this->log("connect to backend server success");
-		$this->log(microtime() . ": Client[$frame->fd] backend-sock[{$socket->sock}]: Connect.");
+        try {
+            if (!$client->connect($this->back_serv['ip'], $this->back_serv['port'], $this->back_serv['timeout'])) {
+                throw new Exception("connect failed. Error: {$client->errCode}\n");
+            }
+        } catch (Exception $e) {
+            $this->log($e->getMessage());
+        }
+        //初始化变量
+        $this->backends[$client->sock] = array(
+            'client_fd' => $frame->fd,
+        );
+        $this->clients[$frame->fd] = array(
+            'socket' => $client,
+        );
+        $this->log("connect to backend server success");
+        $this->log("Client[$frame->fd] backend-sock[{$client->sock}]: Connect.");
     }
 
     /**
@@ -133,16 +137,20 @@ class ProxyServerByCo {
      */         
     public function onMessage($server, $frame) {
         if(!empty($frame)) {
-            $begin_time =  microtime();
+            $begin_time =  $this->_getMicTime();
             $backend_socket = isset($this->clients[$frame->fd]['socket']) ? $this->clients[$frame->fd]['socket'] : NULL;
             if(!empty($backend_socket) && $backend_socket->isConnected()) {
 				//发送数据
                 $ret = $backend_socket->send($frame->data);
-                $end_time = microtime();
+                $end_time = $this->_getMicTime();
                 $this->log('websocket: Send >>>>> :  client_fd='.$frame->fd.'  len='.$ret.'  speed_time='.($end_time-$begin_time));
-				
-				//接受数据				
-				$data = $backend_socket->recv();
+				//接受数据
+                try {
+                    $data = $backend_socket->recv();
+                } catch (Exception $e) {
+                    $this->log($backend_socket->errCode());
+                    $this->log($e->getMessage());
+                }
 				$fd = isset($this->backends[$backend_socket->sock]['client_fd']) ? $this->backends[$backend_socket->sock]['client_fd'] : NULL ;
 				if(!empty($fd) && $this->serv->connection_info($fd) && !empty($data)) {
 					$this->log('websocket: Recv <<<<< :  client_fd='.$fd.'  len='.strlen($data)); 
@@ -168,10 +176,19 @@ class ProxyServerByCo {
     public function log($content, $level = 'DEBUG') {
         $content = '['.date('Y-m-d H:i:s)').']   '.$level.'   '.$content."\n";
         echo $content;
-    } 
+    }
+
+    /**
+     * 获取微秒时间
+     * @return number
+     */
+    private function _getMicTime(){
+        $mictime = microtime();
+        list($usec, $sec) = explode(" ", $mictime);
+        return (float)$usec + (float)$sec;
+    }
 }
 
-//璁剧疆缂栫爜
 header("Content-type: text/html; charset=utf-8");
 $serv = new ProxyServerByCo();
 $serv->run();

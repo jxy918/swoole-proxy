@@ -1,6 +1,6 @@
 <?php
 /**
- * 代理服务器，php版本，游戏服务器，用来代理c++的tcp服务器
+ * 代理服务器，php版本，游戏服务器，用来代理c++的tcp服务器，采用异步非阻塞的方式实现
  */ 
 class ProxyServer {
     /**
@@ -36,7 +36,7 @@ class ProxyServer {
     /**
      * 后端服务器配置
      */         
-    protected $back_serv = array('ip'=>'192.168.7.66', 'port'=>6080, 'timeout'=>0.5);
+    protected $back_serv = array('ip'=>'192.168.1.34', 'port'=>9089, 'timeout'=>0.5);
     
     /**
      * 服务器配置,这里设置很关键， 要了解c++服务器的包头+包体
@@ -78,6 +78,7 @@ class ProxyServer {
 		$this->log("MasterPid={$serv->master_pid}");
         $this->log("ManagerPid={$serv->manager_pid}");
         $this->log("Server: start.Swoole version is [" . SWOOLE_VERSION . "]");
+        $this->log("IP: \e[0;32m{$this->serv_ip}\e[0m, PORT:\e[0;32m{$this->serv_port}\e[0m PROXY_IP:\e[0;32m{$this->back_serv['ip']}\e[0m, PROXY_PORT:\e[0;32m{$this->back_serv['port']}\e[0m, PROXY_TIMEOUT:\e[0;32m{$this->back_serv['timeout']}\e[0m");
     }
 
 	public function onManagerStart($serv) {
@@ -117,14 +118,13 @@ class ProxyServer {
             //初始化变量
             $this->backends[$socket->sock] = array(
                 'client_fd' => $frame->fd,
-                //'socket' => $socket,
             );
             $this->clients[$frame->fd] = array(
                 'socket' => $socket,
             );
         
             $this->log("connect to backend server success");
-            $this->log(microtime() . ": Client[$frame->fd] backend-sock[{$socket->sock}]: Connect.");
+            $this->log(": Client[$frame->fd] backend-sock[{$socket->sock}]: Connect.");
         });
         $socket->on('error', function ($socket) {
             $this->log("connect to backend server fail");
@@ -153,11 +153,11 @@ class ProxyServer {
      */         
     public function onMessage($server, $frame) {
         if(!empty($frame)) {
-            $begin_time =  microtime();
+            $begin_time =  $this->_getMicTime();
             $backend_socket = isset($this->clients[$frame->fd]['socket']) ? $this->clients[$frame->fd]['socket'] : NULL;
             if(!empty($backend_socket) && $backend_socket->isConnected()) {
                 $ret = $backend_socket->send($frame->data);
-                $end_time = microtime();
+                $end_time = $this->_getMicTime();
                 $this->log('websocket: Send >>>>> :  client_fd='.$frame->fd.'  len='.$ret.'  speed_time='.($end_time-$begin_time));
             }	
         }
@@ -169,10 +169,19 @@ class ProxyServer {
     public function log($content, $level = 'DEBUG') {
         $content = '['.date('Y-m-d H:i:s)').']   '.$level.'   '.$content."\n";
         echo $content;
-    } 
+    }
+
+    /**
+     * 获取微秒时间
+     * @return number
+     */
+    private function _getMicTime(){
+        $mictime = microtime();
+        list($usec, $sec) = explode(" ", $mictime);
+        return (float)$usec + (float)$sec;
+    }
 }
 
-//璁剧疆缂栫爜
 header("Content-type: text/html; charset=utf-8");
 $serv = new ProxyServer();
 $serv->run();
