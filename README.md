@@ -1,6 +1,6 @@
 # swoole-proxy
 
-* swoole实现前端代理服务器(websocket), 后端服务器是c，c++
+* websocket协议转tcp，swoole实现前端代理服务器(websocket), 后端服务器是TCP
 
 ## 一，概述
 
