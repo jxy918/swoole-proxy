@@ -42,7 +42,7 @@ class ProxyServer {
      * 服务器配置,这里设置很关键， 要了解c++服务器的包头+包体
      */         
     protected $serv_conf = array(
-		'dispatch_mode' => 2,
+		'dispatch_mode' => 2,	//注意，无状态模式，可以选择2,4,5，具体解释请参考swoole文档		
 		'open_length_check'     => true,
 		'package_length_type'   => 'N',
 		'package_length_offset' => 0,          		
@@ -75,11 +75,12 @@ class ProxyServer {
 
     public function onStart($serv) {
 		swoole_set_process_name(self::PROCESS_NAME_PREFIX.": master: ".get_called_class());
-		$this->log("MasterPid={$serv->master_pid}");
-        $this->log("ManagerPid={$serv->manager_pid}");
-        $this->log("Server: start.Swoole version is [" . SWOOLE_VERSION . "]");
-        $this->log("IP: \e[0;32m{$this->serv_ip}\e[0m, PORT:\e[0;32m{$this->serv_port}\e[0m PROXY_IP:\e[0;32m{$this->back_serv['ip']}\e[0m, PROXY_PORT:\e[0;32m{$this->back_serv['port']}\e[0m, PROXY_TIMEOUT:\e[0;32m{$this->back_serv['timeout']}\e[0m");
-    }
+        $this->log("************************************************************************************");
+        $this->log("* PROXYWS  |  HOST: \e[0;32m{$this->serv_ip}\e[0m, PORT:\e[0;32m{$this->serv_port}\e[0m, MODE:\e[0;32m{$this->serv_conf['dispatch_mode']}\e[0m, WORKER:\e[0;32m{$this->serv_conf['worker_num']}\e[0m");
+		$this->log("* BACKTCP  |  HOST: \e[0;32m{$this->back_serv['ip']}\e[0m, PORT:\e[0;32m{$this->back_serv['port']}\e[0m");
+        $this->log("* MasterPid={$serv->master_pid}  |  ManagerPid={$serv->manager_pid}  |  Swoole version is [" . SWOOLE_VERSION . "]");
+        $this->log("************************************************************************************");
+	}
 
 	public function onManagerStart($serv) {
 		swoole_set_process_name(self::PROCESS_NAME_PREFIX.": manager: ".get_called_class());
@@ -146,6 +147,9 @@ class ProxyServer {
         });
 		
         $socket->connect($this->back_serv['ip'], $this->back_serv['port'], $this->back_serv['timeout']);
+		//统计连接信息
+		$stats = $server->stats();
+        $this->log("connection_num:{$stats['connection_num']}，accept_count:{$stats['accept_count']}，close_count:{$stats['close_count']}");
     }
 
     /**

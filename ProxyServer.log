@@ -160,3 +160,18 @@ Stack trace:
 [2019-01-10 15:57:08 *4071.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #48, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
 Stack trace:
 #0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-11 10:34:03 #5271.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Class 'Log' not found in /apps/swoole-proxy/ProxyServer.php:78
+Stack trace:
+#0 [internal function]: ProxyServer->onStart(Object(Swoole\WebSocket\Server))
+#1 /apps/swoole-proxy/ProxyServer.php(73): Swoole\Server->start()
+#2 /apps/swoole-proxy/ProxyServer.php(188): ProxyServer->run()
+#3 {main}
+  thrown in /apps/swoole-proxy/ProxyServer.php on line 78.
+[2019-01-11 10:36:31 *5286.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function stats() on null in /apps/swoole-proxy/ProxyServer.php:151
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServer.php on line 151.
+[2019-01-11 10:36:50 *5292.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Class 'Log' not found in /apps/swoole-proxy/ProxyServer.php:152
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServer.php on line 152.
