@@ -42,4 +42,4 @@ gameproxy.sh stop          停止代理服务器
 
 ## 四，联系方式
 
-* qq：251413215
+* qq：251413215, 加qq请输入验证消息：swoole-proxy

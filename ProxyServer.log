@@ -1,0 +1,177 @@
+[2018-05-30 00:53:23 *89.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:23 $87.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:25 *90.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:25 $87.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:29 *92.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:29 $87.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:30 *93.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:30 $87.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:39 *91.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:39 $87.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:49 *95.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:49 $87.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:51 *96.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:51 $87.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 00:53:56 *94.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function isConnected() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 00:53:56 $87.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-30 01:00:37 *113.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function close() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 01:00:37 $111.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 01:00:44 *114.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function close() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 01:00:44 $111.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2018-05-30 01:00:52 *115.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function close() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 01:00:52 $111.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-05-30 01:00:59 *116.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function close() on null in /apps/swoole-proxy/ProxyServerByCo.php:101
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 101.
+[2018-05-30 01:00:59 $111.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2019-01-10 15:40:55 *3954.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Class 'Coroutine\Client' not found in /apps/swoole-proxy/ProxyServerByCo.php:115
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 115.
+[2019-01-10 15:40:55 *3956.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Class 'Coroutine\Client' not found in /apps/swoole-proxy/ProxyServerByCo.php:115
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 115.
+[2019-01-10 15:41:05 *3955.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Class 'Coroutine\Client' not found in /apps/swoole-proxy/ProxyServerByCo.php:115
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServerByCo.php on line 115.
+[2019-01-10 15:45:30 *3975.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:46:36 *3983.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:148]
+[2019-01-10 15:46:38 *3984.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:148]
+[2019-01-10 15:47:03 *3991.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:148]
+[2019-01-10 15:48:02 *3999.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:145]
+[2019-01-10 15:50:26 *4014.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:31 *4015.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:35 *4016.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #4, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:36 *4017.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #4, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:36 *4018.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:45 *4019.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:45 *4020.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #6, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:45 *4021.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:46 *4022.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:46 *4023.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:46 *4024.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #5, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:50:47 *4025.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #4, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:51:02 *4026.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #4, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:51:05 *4027.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #7, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:51:14 *4028.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #4, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:51:27 *4029.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #4, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:52:25 *4037.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:52:52 *4044.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:53:27 *4051.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:53:31 *4052.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:53:35 *4053.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #4, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:54:38 *4061.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:54:56 *4062.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #3, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:57:01 *4070.0]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #19, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-10 15:57:08 *4071.1]	ERROR	sw_coro_check_bind (ERROR 10002): client has already been bound to another coroutine #48, reading or writing of the same socket in multiple coroutines at the same time is not allowed.
+Stack trace:
+#0  Swoole\Coroutine\Client->recv() called at [/apps/swoole-proxy/ProxyServerByCo.php:146]
+[2019-01-11 10:34:03 #5271.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Class 'Log' not found in /apps/swoole-proxy/ProxyServer.php:78
+Stack trace:
+#0 [internal function]: ProxyServer->onStart(Object(Swoole\WebSocket\Server))
+#1 /apps/swoole-proxy/ProxyServer.php(73): Swoole\Server->start()
+#2 /apps/swoole-proxy/ProxyServer.php(188): ProxyServer->run()
+#3 {main}
+  thrown in /apps/swoole-proxy/ProxyServer.php on line 78.
+[2019-01-11 10:36:31 *5286.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Call to a member function stats() on null in /apps/swoole-proxy/ProxyServer.php:151
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServer.php on line 151.
+[2019-01-11 10:36:50 *5292.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Error: Class 'Log' not found in /apps/swoole-proxy/ProxyServer.php:152
+Stack trace:
+#0 {main}
+  thrown in /apps/swoole-proxy/ProxyServer.php on line 152.
